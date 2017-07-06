@@ -1,0 +1,15 @@
+<div class="homeTitle">
+  <h1 ng-init="itc.init()">HELLO {{itc.loggedInUser}}  </h1>
+  <button class="logout" ng-click='itc.logOut()'>LOG OUT</button>
+</div>
+<div class="inputValue">
+  <input type="text" ng-model='itc.item' placeholder="Item Name">
+  <input type="url" ng-model='itc.url' placeholder="Item Image">
+  <button class="addBtn" type="button" ng-click="itc.addItem()">Add</button>
+</div>
+<div class="row">
+  <div class="col-sm-3 itemDetail" ng-repeat='item in itc.items'>
+    <p> <img ng-src="{{item.url}}" alt=""> </p>
+    <p class="itemName">{{item.item}} <button ng-if="item.userID == itc.loggedInID" ng-click="itc.deleteItem(item._id)" type="delete">X</button></p>
+  </div>
+</div>
