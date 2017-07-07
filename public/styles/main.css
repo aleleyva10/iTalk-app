@@ -1,0 +1,61 @@
+body {
+  margin: 100px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #01BAEF;
+}
+
+h1, h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+button {
+  font-size: .8em;
+  border-radius: 20px;
+}
+
+img {
+  height: 150px;
+}
+
+.loginInput {
+  text-align: center;
+  margin: 20px;
+}
+
+.homeTitle {
+  text-align: center;
+  margin: 20px;
+}
+
+.logout {
+  text-align: center;
+  background-color: #b50303;
+  color: white;
+  border: none;
+  padding: 8px 8px;
+}
+
+.logout:hover {
+  background-color: #ce2b2b;
+}
+
+input {
+  padding: 8px 8px;
+  margin: 8px;
+}
+
+.inputValue {
+  text-align: center;
+}
+
+.addBtn {
+  text-align: center;
+  border: none;
+  padding: 12px 20px;
+}
+
+.addBtn:hover {
+  background-color: #a09f9f;
+}

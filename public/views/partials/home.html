@@ -3,13 +3,11 @@
   <button class="logout" ng-click='itc.logOut()'>LOG OUT</button>
 </div>
 <div class="inputValue">
-  <input type="text" ng-model='itc.item' placeholder="Item Name">
-  <input type="url" ng-model='itc.url' placeholder="Item Image">
-  <button class="addBtn" type="button" ng-click="itc.addItem()">Add</button>
+  <input type="text" ng-model='itc.phrase' placeholder="Phrase">
+  <button class="addBtn" type="button" ng-click="itc.addPhrase()">Add</button>
 </div>
 <div class="row">
-  <div class="col-sm-3 itemDetail" ng-repeat='item in itc.items'>
-    <p> <img ng-src="{{item.url}}" alt=""> </p>
-    <p class="itemName">{{item.item}} <button ng-if="item.userID == itc.loggedInID" ng-click="itc.deleteItem(item._id)" type="delete">X</button></p>
+  <div class="col-sm-3 phraseLang" ng-repeat='phrase in itc.phrases'>
+    <p class="phraseType">{{phrase.phrase}} <button ng-if="phrase.userID == itc.loggedInID" ng-click="itc.deletePhrase(phrase._id)" type="delete">X</button></p>
   </div>
 </div>
