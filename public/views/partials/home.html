@@ -1,13 +1,21 @@
-<div class="homeTitle">
-  <h1 ng-init="itc.init()">HELLO {{itc.loggedInUser}}  </h1>
-  <button class="logout" ng-click='itc.logOut()'>LOG OUT</button>
-</div>
-<div class="inputValue">
-  <input type="text" ng-model='itc.phrase' placeholder="Phrase">
-  <button class="addBtn" type="button" ng-click="itc.addPhrase()">Add</button>
-</div>
-<div class="row">
-  <div class="col-sm-3 phraseLang" ng-repeat='phrase in itc.phrases'>
-    <p class="phraseType">{{phrase.phrase}} <button ng-if="phrase.userID == itc.loggedInID" ng-click="itc.deletePhrase(phrase._id)" type="delete">X</button></p>
-  </div>
-</div>
+<ul class="nav nav-pills">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li class="disabled"><a href="#">Disabled</a></li>
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+      Dropdown <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Another action</a></li>
+      <li><a href="#">Something else here</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Separated link</a></li>
+    </ul>
+  </li>
+</ul>
+<ul class="pager">
+  <li><a href="#">Previous</a></li>
+  <li><a href="#">Next</a></li>
+</ul>

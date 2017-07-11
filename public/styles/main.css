@@ -1,61 +1,104 @@
+* {
+box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
 body {
-  margin: 100px;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #01BAEF;
+font-family: 'Montserrat', sans-serif;
+background-color: #3498DB;
+padding: 50px;
+}
+
+.smurf {
+  text-align: center;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 3px solid white;
+}
+.login {
+margin: 20px auto;
+width: 300px;
+}
+
+.login-screen {
+background-color: #FFF;
+padding: 20px;
+border-radius: 5px
 }
 
 h1, h2 {
   font-family: Helvetica, Arial, sans-serif;
   text-align: center;
   font-weight: bold;
+  color: white;
+}
+
+.app-title {
+text-align: center;
+color: #777;
+}
+
+.login-form {
+text-align: center;
+}
+.control-group {
+margin-bottom: 10px;
 }
 
 button {
   font-size: .8em;
   border-radius: 20px;
-}
-
-img {
-  height: 150px;
-}
-
-.loginInput {
   text-align: center;
-  margin: 20px;
 }
-
-.homeTitle {
-  text-align: center;
-  margin: 20px;
-}
-
-.logout {
-  text-align: center;
-  background-color: #b50303;
-  color: white;
-  border: none;
-  padding: 8px 8px;
-}
-
-.logout:hover {
-  background-color: #ce2b2b;
-}
-
 input {
-  padding: 8px 8px;
-  margin: 8px;
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border .5s;
 }
 
-.inputValue {
-  text-align: center;
+input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
 }
 
-.addBtn {
-  text-align: center;
-  border: none;
-  padding: 12px 20px;
+.btn {
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
 }
 
-.addBtn:hover {
-  background-color: #a09f9f;
+.btn:hover {
+  background-color: #2980B9;
+}
+
+.login-link {
+  font-size: 12px;
+  color: #444;
+  display: block;
+	margin-top: 12px;
 }

@@ -1,18 +1,21 @@
-<div>
-  <img src="http://is5.mzstatic.com/image/thumb/Purple6/v4/41/65/a5/4165a52c-7cdc-f7d0-a52d-7396c4091f29/source/175x175bb.jpg" alt="">
-  <div class="loginInput">
-    <button ng-show="itc.loginToggle" type="submit" name="button" ng-click='itc.logIn()'>Login</button>
-    <button ng-hide="itc.loginToggle" type="submit" name="button" ng-click="itc.register()">Register</button>
-    <a href="#!" ng-show="itc.loginToggle" ng-click="itc.toggleLogin()">Register</a>
-    <a href='#!' ng-hide="itc.loginToggle" ng-click="itc.toggleLogin()">Login</a>
-  </div>
-  <div class="loginInput">
-    <input type="text" ng-model="itc.username" placeholder="username">
-  </div>
-  <div class="loginInput">
-    <input type="password" ng-model="itc.password" placeholder="password">
-  </div>
-  <div class="submitInput">
-    <button type="submit" name="button" ng-click='itc.submit()'>SUBMIT</button>
+<div class="login">
+  <div class="login-screen">
+    <div class="app-title">
+      <h1>LOGIN</h1>
+    </div>
+
+    <div class="login-form">
+      <div class="control-group">
+        <input type="text" class="login-field" value="" placeholder="username" id="login-name">
+        <label class="login-field-icon fui-user" for="login-name"></label>
+      </div>
+
+      <div class="control-group">
+        <input type="password" class="login-field" value="" placeholder="password" id="login-pass">
+        <label class="login-field-icon fui-lock" for="login-pass"></label>
+      </div>
+
+      <a class="btn btn-primary btn-large btn-block" href="#">Login</a>
+    </div>
   </div>
 </div>

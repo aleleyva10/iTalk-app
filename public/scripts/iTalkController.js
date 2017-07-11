@@ -2,26 +2,32 @@ var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(function($routeProvider) {
   $routeProvider.when('/', {
-    templateUrl: 'views/partials/login.html'
+    template: '',
+    controller: 'iTalkController as itc',
   }).when('/home', {
-    templateUrl: 'views/partials/home.html'
-  }).when('/register', {
-    templateUrl: 'views/partials/register.html'
+    templateUrl: 'views/partials/home.html',
+    controller: 'HomeController as hc'
+  }).when('/login', {
+    templateUrl: 'views/partials/login.html',
+    controller: 'LoginController as lc'
+  });when('/register', {
+    templateUrl: 'views/partials/register.html',
+    controller: 'RegisterController as rc'
   });
 });
 
 myApp.controller('iTalkController', iTalkController);
+// myApp.controller('HomeController', HomeController);
+// myApp.controller('LoginController', LoginController);
+// myApp.controller('RegisterController', RegisterController);
+
 
 function iTalkController(iTalkService, $location) {
   var vm = this;
   vm.loggedInUser;
   vm.loggedInID;
   vm.loginToggle = true;
-  vm.items = [];
-
-  vm.toggleLogin = function() {
-    vm.loginToggle = !vm.loginToggle;
-  };
+  vm.phrases = [];
 
   vm.register = function() {
     console.log('in controller register');
@@ -89,7 +95,7 @@ function iTalkController(iTalkService, $location) {
     iTalkService.checkUser().then(function(res) {
       console.log(res);
       if (res.data === "No User Logged") {
-        sweetAlert("Oops!", "No User Logged In");
+        sweetAlert("Sorry!", "No User Logged In");
         $location.path('/');
       } else {
         vm.loggedInUser = res.data.username;

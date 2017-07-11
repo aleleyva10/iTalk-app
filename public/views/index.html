@@ -6,27 +6,31 @@
   <script src="vendors/angular.min.js" charset="utf-8"></script>
   <script src="vendors/angular-route.min.js" charset="utf-8"></script>
   <script src="scripts/iTalkController.js" charset="utf-8"></script>
+  <script src="scripts/homeController.js" charset="utf-8"></script>
+  <script src="scripts/loginController.js" charset="utf-8"></script>
+  <script src="scripts/registerController.js" charset="utf-8"></script>
   <script src="scripts/services/iTalkService.js" charset="utf-8"></script>
-  <script src="vendors/bootstrap.min.css" charset="utf-8"></script>
   <script src="vendors/sweetalert.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="vendors/sweetalert.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
   <link rel="stylesheet" href="styles/main.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <title>iTalk Project</title>
+  <base href="/" />
 </head>
 
 <body ng-app="myApp">
   <div ng-controller="iTalkController as itc">
-    <img src="http://is5.mzstatic.com/image/thumb/Purple6/v4/41/65/a5/4165a52c-7cdc-f7d0-a52d-7396c4091f29/source/175x175bb.jpg" alt="">
-    <h1>A SIMPLE AND FUN WAY TO LEARN AND SPEAK A NEW LANGUAGE</h1>
-    <div class="loginInput">
-      <button ng-show="itc.loginToggle" type="submit" name="button" ng-click='itc.logIn()'>LOGIN</button>
-      <button ng-hide="itc.loginToggle" type="submit" name="button" ng-click='itc.register()'>REGISTER</button>
-      <a href="#!" ng-show="itc.loginToggle" ng-click="itc.toggleLogin()">REGISTER</a>
-      <a href='#!' ng-hide="itc.loginToggle" ng-click="itc.toggleLogin()">LOGIN</a>
+    <div class="smurf">
+      <img src="http://cupcakedigital.com/wp-content/uploads/2014/12/SMURF_iTalk_BKGD.jpg" alt="">
     </div>
-    <!-- <button type="text" class="loginBtn" ng-click='itc.logIn()'>LOGIN</button>
-    <button type="text" class="registerBtn" ng-click='itc.register()'>REGISTER</button> -->
+    <h1>A SIMPLE AND FUN WAY TO LEARN AND SPEAK A NEW LANGUAGE</h1>
+        <div class="row">
+          <div id="buttonLinks">
+            <a class="btn btn-info login" href="/#!/login">LOGIN</a>
+            <a class="btn btn-primary register" href="/#!/register">REGISTER</a>
+          </div>
+        </div>
   </div>
   <ng-view></ng-view>
 </body>
