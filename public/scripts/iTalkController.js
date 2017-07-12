@@ -2,25 +2,21 @@ var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(function($routeProvider) {
   $routeProvider.when('/', {
-    template: '',
+    template: 'views/index.html',
+    controller: 'iTalkController as itc',
+  }).when('/login', {
+    templateUrl: 'views/partials/login.html',
     controller: 'iTalkController as itc',
   }).when('/home', {
     templateUrl: 'views/partials/home.html',
-    controller: 'HomeController as hc'
-  }).when('/login', {
-    templateUrl: 'views/partials/login.html',
-    controller: 'LoginController as lc'
-  });when('/register', {
+    controller: 'iTalkController as itc',
+  }).when('/register', {
     templateUrl: 'views/partials/register.html',
-    controller: 'RegisterController as rc'
+    controller: 'iTalkController as itc',
   });
 });
 
 myApp.controller('iTalkController', iTalkController);
-// myApp.controller('HomeController', HomeController);
-// myApp.controller('LoginController', LoginController);
-// myApp.controller('RegisterController', RegisterController);
-
 
 function iTalkController(iTalkService, $location) {
   var vm = this;

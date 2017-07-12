@@ -1,21 +1,22 @@
-<div class="login">
+<div>
+<div class="loginInput">
   <div class="login-screen">
     <div class="app-title">
       <h1>LOGIN</h1>
     </div>
-
     <div class="login-form">
       <div class="control-group">
-        <input type="text" class="login-field" value="" placeholder="username" id="login-name">
+        <input type="text" ng-model="itc.username" placeholder="username" id="login-name">
         <label class="login-field-icon fui-user" for="login-name"></label>
       </div>
 
       <div class="control-group">
-        <input type="password" class="login-field" value="" placeholder="password" id="login-pass">
+        <input type="password" ng-model="itc.password" placeholder="password" id="login-pass">
         <label class="login-field-icon fui-lock" for="login-pass"></label>
       </div>
 
-      <a class="btn btn-primary btn-large btn-block" href="#">Login</a>
+      <a class="btn btn-primary btn-large btn-block" href="/index">Login</a>
     </div>
   </div>
+</div>
 </div>
